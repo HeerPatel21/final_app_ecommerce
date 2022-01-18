@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "726221247194",
+    "project_id": "appdressmaterial",
+    "storage_bucket": "appdressmaterial.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:726221247194:android:ccdb8794dcc96b15d5cbe3",
+        "android_client_info": {
+          "package_name": "com.hemaxi.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "726221247194-i5orubehcqph6tbhrjl706kvootk6ems.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAtgLYCy4bAR4iNoZu6NhEe1Wj3-Mh3TD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "726221247194-i5orubehcqph6tbhrjl706kvootk6ems.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
