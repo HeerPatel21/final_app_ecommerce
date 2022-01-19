@@ -62,7 +62,7 @@ class LandingPage extends StatelessWidget {
           ), //textStyle
         ), //text
         Text(
-          'Dress Material',
+          'Dress Materials \nand immitation',
           style: TextStyle(
             fontStyle: FontStyle.italic,
             fontSize: 27,
