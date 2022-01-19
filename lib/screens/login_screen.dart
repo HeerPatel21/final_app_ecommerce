@@ -21,7 +21,7 @@ class LoginScreen extends StatelessWidget {
           ), //BoxDecoration
           child: Column(children: [
             crossAxisAlignment: CrossAxisAlignment.center,
-            MainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             Text(
               'Hemaxi',
               style: TextStyle(
