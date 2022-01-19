@@ -6,6 +6,7 @@ import 'utils/color_helper.dart';
 import 'screens/admin_home.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -89,12 +90,14 @@ class _LandingPageState extends State<LandingPage> {
         GestureDetector(
           onTap: () {
             //check user null
-            (authNotifier.user == null) ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginScreen())) :
-            (authNotifier.userDetails == null) ? print('wait') :
-            (authNotifier.userDetails.role == 'admin') ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => AdminHomeScreen())) :
-            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen()));
-
-          }
+            (authNotifier.user == null)
+                ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginScreen()))
+                : (authNotifier.userDetails == null)
+                    ? print('wait')
+                    : (authNotifier.userDetails.role == 'admin')
+                        ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => AdminHomeScreen()))
+                        : Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+          },
           child: Container(
             padding: EdgeInsets.symmetric(
               horizontal: 80,
