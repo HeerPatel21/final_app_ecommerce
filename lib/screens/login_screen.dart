@@ -19,6 +19,8 @@ class LoginScreen extends StatelessWidget {
           ), //lineargradient
         ), //BoxDecoration
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'Hemaxi',
