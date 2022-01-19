@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'services/auth_notifier.dart';
 import 'package:provider/provider.dart';
+import 'utils/color_helper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -64,7 +65,7 @@ class LandingPage extends StatelessWidget {
           'Dress Material',
           style: TextStyle(
             fontStyle: FontStyle.italic,
-            fontsize: 27,
+            fontSize: 27,
             color: kPrimaryColor,
           ), //TextStyle
         ), //text
