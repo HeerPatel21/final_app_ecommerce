@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Hemaxi Dress Materail',
-      theme: ThemeData(primaryColor: Color.blue //Color(0xffff4d6d),
+      theme: ThemeData(primaryColor: Color( #1F51FF)//Color(0xffff4d6d),
           ),
       home: Scaffold(
         body: LandingPage(),
