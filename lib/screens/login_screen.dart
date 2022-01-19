@@ -10,13 +10,14 @@ class LoginScreen extends StatelessWidget {
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
-              Color.fromRGBO(255,138,120,1),
-              Color.fromRGBO(255,114,117,1),
-              Color.fromRGBO(355,63,111,1),
-
-            ]
-          )
-        )
+              Color.fromRGBO(255, 138, 120, 1),
+              Color.fromRGBO(255, 114, 117, 1),
+              Color.fromRGBO(355, 63, 111, 1),
+            ],
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+          ), //lineargradient
+        ), //BoxDecoration
         child: Center(child: Text('Login')),
       ), //container
     ); //scaffold
