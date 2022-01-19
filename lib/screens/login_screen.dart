@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../utils/color_helper.dart';
 
 class LoginScreen extends StatelessWidget {
   @override
@@ -19,6 +20,8 @@ class LoginScreen extends StatelessWidget {
             ), //lineargradient
           ), //BoxDecoration
           child: Column(children: [
+            crossAxisAlignment: CrossAxisAlignment.center,
+            MainAxisAlignment: MainAxisAlignment.center,
             Text(
               'Hemaxi',
               style: TextStyle(
