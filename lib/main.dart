@@ -58,7 +58,7 @@ class LandingPage extends StatelessWidget {
           style: TextStyle(
             fontSize: 60,
             fontWeight: FontWeight.bold,
-            color: Colors.pink,
+            color: Colors.blue,
           ), //textStyle
         ), //text
         Text(
