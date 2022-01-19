@@ -70,19 +70,22 @@ class LandingPage extends StatelessWidget {
           ), //TextStyle
         ), //text
         Container(
-          padding: EdgeInsets.symmetric(horizontal: 80,vertical: 15,),
+          padding: EdgeInsets.symmetric(
+            horizontal: 80,
+            vertical: 15,
+          ),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(30),
-          ),//BoxDecoration
+          ), //BoxDecoration
           child: Text(
-            "Let's Go"
+            "Let's Go",
             style: TextStyle(
               fontSize: 20,
-              color: Color.fromRGBO(255,63,111,1),
-            ),//textStyle
+              color: Color.fromRGBO(255, 63, 111, 1),
+            ), //textStyle
           ),
-        ),//text//container
+        ), //text//container
       ]), //widget //column
     ); //container
   }
