@@ -69,6 +69,9 @@ class LandingPage extends StatelessWidget {
             color: kPrimaryColor,
           ), //TextStyle
         ), //text
+        SizedBox(
+          height: 140,
+        ), //sizedBox
         Container(
           padding: EdgeInsets.symmetric(
             horizontal: 80,
@@ -84,8 +87,8 @@ class LandingPage extends StatelessWidget {
               fontSize: 20,
               color: Color.fromRGBO(255, 63, 111, 1),
             ), //textStyle
-          ),
-        ), //text//container
+          ), //text
+        ), //container
       ]), //widget //column
     ); //container
   }
