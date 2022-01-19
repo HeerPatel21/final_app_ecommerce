@@ -29,15 +29,7 @@ class LoginScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ), //textStyle
-            ), //text
-            Text(
-              'Dress Materials \nAnd Immitations',
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
-                fontSize: 27,
-                color: kPrimaryColor,
-              ), //TextStyle
-            ), //text
+            ), //text            
           ])), //container
     ); //scaffold
   }
