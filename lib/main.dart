@@ -60,8 +60,15 @@ class LandingPage extends StatelessWidget {
             color: Colors.white,
           ), //textStyle
         ), //text
-      ] //Widget
-          ), //column
+        Text(
+          'Dress Material',
+          style: TextStyle(
+            fontStyle: FontStyle.italic,
+            fontsize: 27,
+            color: kPrimaryColor,
+          ), //TextStyle
+        ), //text
+      ]), //widget //column
     ); //container
   }
 } //Stateless Widget
