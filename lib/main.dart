@@ -76,6 +76,9 @@ class _LandingPageState extends State<LandingPage> {
             color: Colors.white,
           ), //textStyle
         ), //text
+        SizedBox(
+          height: 20,
+        ),
         Text(
           'Dress Materials \nAnd Immitations',
           style: TextStyle(
