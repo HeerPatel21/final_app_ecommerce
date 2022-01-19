@@ -3,7 +3,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'services/auth_notifier.dart';
 import 'package:provider/provider.dart';
 import 'utils/color_helper.dart';
-
+import 'screens/admin_home.dart';
+import 'screens/login_screen.dart';
+import 'screens/home_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -35,9 +37,21 @@ class MyApp extends StatelessWidget {
   } //Widget
 }
 
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
+  @override
+  _LandingPageState createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
+  @override
+  void initState() {
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context);
     return Container(
       width: MediaQuery.of(context).size.width,
       height: MediaQuery.of(context).size.height,
@@ -72,22 +86,32 @@ class LandingPage extends StatelessWidget {
         SizedBox(
           height: 140,
         ), //sizedBox
-        Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: 80,
-            vertical: 15,
+        GestureDetector(
+          onTap: () {
+            //check user null
+            (authNotifier.user == null) ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => LoginScreen())) :
+            (authNotifier.userDetails == null) ? print('wait') :
+            (authNotifier.userDetails.role == 'admin') ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => AdminHomeScreen())) :
+            Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+
+          }
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 80,
+              vertical: 15,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+            ), //BoxDecoration
+            child: Text(
+              "Let's Go",
+              style: TextStyle(
+                fontSize: 20,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ), //textStyle
+            ), //text
           ),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-          ), //BoxDecoration
-          child: Text(
-            "Let's Go",
-            style: TextStyle(
-              fontSize: 20,
-              color: Color.fromRGBO(255, 63, 111, 1),
-            ), //textStyle
-          ), //text
         ), //container
       ]), //widget //column
     ); //container
