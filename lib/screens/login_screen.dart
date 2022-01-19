@@ -30,7 +30,7 @@ class LoginScreen extends StatelessWidget {
                 color: Colors.white,
               ), //textStyle
             ), //text            
-          ])), //container
+          ],),), //container
     ); //scaffold
   }
 }
