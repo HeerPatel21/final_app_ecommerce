@@ -79,7 +79,7 @@ class LandingPage extends StatelessWidget {
             "Let's Go"
             style: TextStyle(
               fontSize: 20,
-              color: Colors.fromRGBO(255,63,111,1),
+              color: Color.fromRGBO(255,63,111,1),
             ),//textStyle
           ),
         ),//text//container
