@@ -51,6 +51,17 @@ class LandingPage extends StatelessWidget {
           end: Alignment.bottomCenter,
         ),
       ), //boxDecoration
-    );
+      child: Column(crossAxisAlignment: CrossAxisAlignment.center, mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+        Text(
+          'Hemaxi',
+          style: TextStyle(
+            fontSize: 60,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ), //textStyle
+        ), //text
+      ] //Widget
+          ), //column
+    ); //container
   }
 } //Stateless Widget
