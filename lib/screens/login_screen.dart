@@ -5,8 +5,8 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-      child: Center(child: Text('Login')),
-    );
-    );
+        child: Center(child: Text('Login')),
+      ), //container
+    ); //scaffold
   }
 }
