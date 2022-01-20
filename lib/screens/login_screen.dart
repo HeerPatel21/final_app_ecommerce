@@ -58,6 +58,7 @@ class LoginScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
+            cursorColor: Color.fromRGBO(255, 63, 111, 1),
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
               enabledBorder: InputBorder.none,
