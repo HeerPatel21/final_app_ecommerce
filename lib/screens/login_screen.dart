@@ -45,6 +45,9 @@ class LoginScreen extends StatelessWidget {
       ), //container
     ); //scaffold
   }
+  SizedBox(
+    height: 20,
+  );
 
   Widget _buildLoginForm() {
     return Column(
