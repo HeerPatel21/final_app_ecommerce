@@ -4,6 +4,8 @@ import '../models/user.dart';
 
 class LoginScreen extends StatelessWidget {
   Users _users = new Users();
+
+  bool showPassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,7 +93,7 @@ class LoginScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
-            obscureText: true,
+            obscureText: showPassword,
             validator: (value) {
               return null;
             },
