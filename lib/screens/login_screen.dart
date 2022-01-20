@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
+import '../models/user.dart';
 
 class LoginScreen extends StatelessWidget {
   Users _users = new Users();
