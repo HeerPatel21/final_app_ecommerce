@@ -66,7 +66,7 @@ class LoginScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(255, 63, 111, 1),
               ), //textStyle
-              prefixIcon: Icon(
+              Icon: Icon(
                 Icons.email,
                 color: Color.fromRGBO(255, 63, 111, 1),
               ),
