@@ -39,9 +39,27 @@ class LoginScreen extends StatelessWidget {
                 color: kPrimaryColor,
               ), //TextStyle
             ), //text
+            _buildLoginForm(),
           ],
         ),
       ), //container
     ); //scaffold
+  }
+
+  Widget _buildLoginForm() {
+    return Column(
+      children: [
+        //email text field
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(40),
+          ), //BoxDecoration
+          child: TextFormField(),
+        )
+      ],
+    ); //column
   }
 }
