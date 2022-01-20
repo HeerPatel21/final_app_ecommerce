@@ -57,7 +57,18 @@ class LoginScreen extends StatelessWidget {
             color: Colors.white,
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
-          child: TextFormField(),
+          child: TextFormField(
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              enabledBorder: InputBorder.none,
+              hintText: 'Email',
+              hintStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ), //textStyle
+              prefixIcon: Icon(Icons.email),
+            ),
+          ),
         )
       ],
     ); //column
