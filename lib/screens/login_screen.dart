@@ -2,10 +2,16 @@ import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
 import '../models/user.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  @override
+  _LoginScreenState createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
   Users _users = new Users();
 
   bool showPassword = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,6 +109,16 @@ class LoginScreen extends StatelessWidget {
             cursorColor: Color.fromRGBO(255, 63, 111, 1),
             keyboardType: TextInputType.visiblePassword,
             decoration: InputDecoration(
+              suffixIcon: IconButton(
+                  icon: Icon(
+                    (showPassword) ? Icons.visibility_off : Icons.visibility,
+                    color: Color.fromRGBO(255, 63, 111, 1),
+                  ),
+                  onPressed: () {
+                    setState(() {
+                      showPassword = !showPassword;
+                    });
+                  }),
               enabledBorder: InputBorder.none,
               hintText: 'Password',
               hintStyle: TextStyle(
