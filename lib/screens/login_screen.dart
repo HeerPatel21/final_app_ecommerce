@@ -91,6 +91,7 @@ class LoginScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
+            obscureText: true,
             validator: (value) {
               return null;
             },
@@ -98,7 +99,7 @@ class LoginScreen extends StatelessWidget {
               _users.password = newValue;
             },
             cursorColor: Color.fromRGBO(255, 63, 111, 1),
-            keyboardType: TextInputType.emailAddress,
+            keyboardType: TextInputType.visiblePassword,
             decoration: InputDecoration(
               enabledBorder: InputBorder.none,
               hintText: 'Password',
