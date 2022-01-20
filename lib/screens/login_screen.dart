@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
 
 class LoginScreen extends StatelessWidget {
+  Users _users = new Users();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,6 +59,12 @@ class LoginScreen extends StatelessWidget {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
+            validator: (value) {
+              return null;
+            },
+            onSaved: (newValue) {
+              _users.email = newValue;
+            },
             cursorColor: Color.fromRGBO(255, 63, 111, 1),
             keyboardType: TextInputType.emailAddress,
             decoration: InputDecoration(
