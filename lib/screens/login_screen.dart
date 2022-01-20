@@ -53,6 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
           ],
         ),
       ), //container
+      SizedBox(height:20),
     ); //scaffold
   }
 
@@ -90,6 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ), //container
+        SizedBox(height:20),
         //password test field
         Container(
           margin: EdgeInsets.symmetric(horizontal: 40),
