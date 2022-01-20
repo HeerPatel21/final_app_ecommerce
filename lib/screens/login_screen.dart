@@ -52,8 +52,9 @@ class _LoginScreenState extends State<LoginScreen> {
             _buildLoginForm(),
           ],
         ),
+         SizedBox(height:20),
       ), //container
-      SizedBox(height:20),
+     
     ); //scaffold
   }
 
