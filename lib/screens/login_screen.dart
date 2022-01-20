@@ -81,7 +81,38 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
           ),
-        )
+        ), //container
+        //password test field
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(40),
+          ), //BoxDecoration
+          child: TextFormField(
+            validator: (value) {
+              return null;
+            },
+            onSaved: (newValue) {
+              _users.password = newValue;
+            },
+            cursorColor: Color.fromRGBO(255, 63, 111, 1),
+            keyboardType: TextInputType.emailAddress,
+            decoration: InputDecoration(
+              enabledBorder: InputBorder.none,
+              hintText: 'Password',
+              hintStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ), //textStyle
+              icon: Icon(
+                Icons.lock,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ),
+            ),
+          ),
+        ), //container
       ],
     ); //column
   }
