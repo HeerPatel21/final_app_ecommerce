@@ -9,20 +9,14 @@ import 'screens/home_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  if (kIsWeb) {
-    await Firebase.initializeApp(
-      options: FirebaseOptions(
-        apiKey: "AIzaSyCAV3R0_rKt49pg7F6sTx5LehBqN0ynXHI",
-        // Your apiKey
-        appId: "1:726221247194:web:309404becdd5afa8d5cbe3", // Your appId
-        messagingSenderId: "726221247194", // Your messagingSenderId
-        projectId: "appdressmaterial", // Your projectId
-        storageBucket: "appdressmaterial.appspot.com",
-      ),
-    );
-  } else {
-    await Firebase.initializeApp();
-  }
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "XXX", // Your apiKey
+      appId: "XXX", // Your appId
+      messagingSenderId: "XXX", // Your messagingSenderId
+      projectId: "XXX", // Your projectId
+    ),
+  );
   runApp(
     ChangeNotifierProvider(create: (_) => AuthNotifier(), child: MyApp()),
   );
