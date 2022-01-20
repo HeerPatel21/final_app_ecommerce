@@ -49,6 +49,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: kPrimaryColor,
               ), //TextStyle
             ), //text
+            SizedBox(height: 20),
             _buildLoginForm(),
           ],
         ),
