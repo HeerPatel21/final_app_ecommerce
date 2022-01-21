@@ -134,17 +134,20 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ), //container
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            Text(
-              "Forgot Password ?",
-              style: TextStyle(
-                color: Colors.white,
-                decoration: TextDecoration.underline,
-              ), //textStyle
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(right: 20, top: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Text(
+                "Forgot Password ?",
+                style: TextStyle(
+                  color: Colors.white,
+                  decoration: TextDecoration.underline,
+                ), //textStyle
+              ),
+            ],
+          ),
         ), //text
       ],
     ); //column
