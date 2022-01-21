@@ -156,6 +156,13 @@ class _LoginScreenState extends State<LoginScreen> {
             color: Colors.white,
             borderRadius: BorderRadius.circular(30),
           ), //boxDecoration
+          child: Text(
+            "Log In",
+            style: TextStyle(
+              fontSize: 20,
+              color: Color.fromRGBO(255, 63, 111, 1),
+            ),
+          ),
         ) //container
       ],
     ); //column
