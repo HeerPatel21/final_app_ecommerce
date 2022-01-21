@@ -134,6 +134,17 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
         ), //container
+        Row(
+          children: [
+            Text(
+              "Forgot Password ?",
+              style: TextStyle(
+                color: Colors.white,
+                decoration: TextDecoration.underline,
+              ), //textStyle
+            ),
+          ],
+        ), //text
       ],
     ); //column
   }
