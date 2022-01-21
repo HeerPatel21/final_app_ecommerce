@@ -149,7 +149,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ], //children
           ), //row
         ), //padding
-        SizedBox(height:20);
+        SizedBox(height: 50),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
           decoration: BoxDecoration(
