@@ -4,6 +4,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'auth_notifier.dart';
 import '../models/user.dart';
 import '../screens/admin_home.dart';
+import '../screens/login_screen.dart';
 
 class Authentication {
   FirebaseAuth auth = FirebaseAuth.instance;
