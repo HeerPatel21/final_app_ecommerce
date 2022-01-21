@@ -4,6 +4,7 @@ import '../models/user.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../services/auth.dart';
 import '../services/auth_notifier.dart';
+import 'package:provider/provider.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
