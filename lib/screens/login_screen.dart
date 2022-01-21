@@ -145,10 +145,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   color: Colors.white,
                   decoration: TextDecoration.underline,
                 ), //textStyle
-              ),
-            ],
-          ),
-        ), //text
+              ), //text
+            ], //children
+          ), //row
+        ), //padding
       ],
     ); //column
   }
