@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
 import '../models/user.dart';
+import 'package:fluttertoast/fluttertoast.dart';
+import '../services/auth.dart';
+import '../services/auth_notifier.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -9,8 +12,52 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   Users _users = new Users();
+  Authentication _authentication = new Authentication();
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   bool showPassword = true;
+
+  //initState
+  @override
+  void initState() {
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
+    //initialize current user
+    _authentication.initializeCurrentUser(authNotifier);
+    super.initState();
+  }
+
+  void toast(args) {
+    FlutterToast.showToast(
+      msg: msg,
+      textColor: Colors.white,
+      toastLength: Toast.LENGTH_SHORT,
+      backGroundColor: Colors.grey,
+      gravity: ToastGravity.BOTTOM,
+    );
+  }
+  //creating submit function
+  void _submitForm() {
+    if (!_formKey.currentState.validate()) {
+      return;
+    }
+    _formKey.currentState.save();
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
+    RegExp regExp = new 
+    RegExp(r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$');
+
+
+    if (!regExp.hasMatch(_users.email)) {
+      //toast 
+      toast("Enter a Valid Email ID");
+    } else if(_users.password.length < 8) {
+      toast("Password must have atleast 8 characters");
+    }
+    else {
+      //login function
+      _authentication.login(_users,authNotifier,context);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,29 +76,32 @@ class _LoginScreenState extends State<LoginScreen> {
             end: Alignment.bottomCenter,
           ), //lineargradient
         ), //BoxDecoration
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Hemaxi',
-              style: TextStyle(
-                fontSize: 60,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ), //textStyle
-            ), //text
-            Text(
-              'Dress Materials \nAnd Immitations',
-              style: TextStyle(
-                fontStyle: FontStyle.italic,
-                fontSize: 27,
-                color: kPrimaryColor,
-              ), //TextStyle
-            ), //text
-            SizedBox(height: 40),
-            _buildLoginForm(),
-          ],
+        child: Form(
+          key: _formKey,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Hemaxi',
+                style: TextStyle(
+                  fontSize: 60,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ), //textStyle
+              ), //text
+              Text(
+                'Dress Materials \nAnd Immitations',
+                style: TextStyle(
+                  fontStyle: FontStyle.italic,
+                  fontSize: 27,
+                  color: kPrimaryColor,
+                ), //TextStyle
+              ), //text
+              SizedBox(height: 40),
+              _buildLoginForm(),
+            ],
+          ),
         ),
       ), //container
     ); //scaffold
@@ -150,17 +200,24 @@ class _LoginScreenState extends State<LoginScreen> {
           ), //row
         ), //padding
         SizedBox(height: 50),
-        Container(
-          padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(30),
-          ), //boxDecoration
-          child: Text(
-            "Log In",
-            style: TextStyle(
-              fontSize: 20,
-              color: Color.fromRGBO(255, 63, 111, 1),
+        GestureDetector(
+          onTap: () {
+            //submit function
+            _submitForm();
+
+          }
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+            ), //boxDecoration
+            child: Text(
+              "Log In",
+              style: TextStyle(
+                fontSize: 20,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ),
             ),
           ),
         ) //container
