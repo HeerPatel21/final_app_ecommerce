@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'auth_notifier.dart';
 import '../models/user.dart';
+import '../screens/admin_home.dart';
 
 class Authentication {
   FirebaseAuth auth = FirebaseAuth.instance;
