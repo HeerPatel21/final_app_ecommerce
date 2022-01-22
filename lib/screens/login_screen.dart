@@ -217,7 +217,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Color.fromRGBO(255, 63, 111, 1),
               ),
             ),
-          ),//container
+          ), //container
         ), //GestureDetector
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -227,18 +227,18 @@ class _LoginScreenState extends State<LoginScreen> {
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
-              ),//textStyle
-            ),//text
+              ), //textStyle
+            ), //text
             Text(
-              'Sign Up Here!'
+              'Sign Up Here!',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
-              ),//textStyle
-            ),//text
-          ],//children
-        )//row
+              ), //textStyle
+            ), //text
+          ], //children
+        ) //row
       ],
     ); //column
   }
