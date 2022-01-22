@@ -221,7 +221,7 @@ class _LoginScreenState extends State<LoginScreen> {
         ), //GestureDetector
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
-          children[
+          children: [
             Text(
               'Not a registered?New User?'
               style: TextStyle(
