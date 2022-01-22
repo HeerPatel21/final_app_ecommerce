@@ -217,8 +217,28 @@ class _LoginScreenState extends State<LoginScreen> {
                 color: Color.fromRGBO(255, 63, 111, 1),
               ),
             ),
-          ),
-        ) //container
+          ),//container
+        ) //GestureDetector
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children[
+            Text(
+              'Not a registered?New User?'
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ),//textStyle
+            ),//text
+            Text(
+              'Sign Up Here!'
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),//textStyle
+            ),//text
+          ],//children
+        )//row
       ],
     ); //column
   }
