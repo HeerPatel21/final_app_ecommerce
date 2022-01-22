@@ -25,7 +25,7 @@ class _LoginScreenState extends State<LoginScreen> {
     AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
     //initialize current user
     _authentication.initializeCurrentUser(authNotifier);
-    super.initState();
+    //super.initState();
   }
 
   void toast(args) {
