@@ -12,7 +12,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class Authentication {
   FirebaseAuth auth = FirebaseAuth.instance;
 
-  void toast(args) {
+  void toast(String msg) {
     Fluttertoast.showToast(
       msg: msg,
       textColor: Colors.white,
@@ -108,7 +108,7 @@ class Authentication {
 
   //to get user details
   Future<void> getUserDetails(AuthNotifier authNotifier) {
-    FirebaseFirestore.instance.collection('users').doc(authNotifier.user.uid).get().catchEror((e) => print(e)).then((value) => (value != null) ? authNotifier.setUserDetails(Users.fromMap(value.data())) : print(value));
+    FirebaseFirestore.instance.collection('users').doc(authNotifier.user.uid).get().catccatchError => print(e)).then((value) => (value != null) ? authNotifier.setUserDetails(Users.fromMap(value.data())) : print(value));
   }
 
   //initialize current user
