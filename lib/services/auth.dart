@@ -16,7 +16,7 @@ class Authentication {
       msg: msg,
       textColor: Colors.white,
       toastLength: Toast.LENGTH_SHORT,
-      backGroundColor: Colors.grey,
+      backgroundColor: Colors.grey,
       gravity: ToastGravity.BOTTOM,
     );
   }
@@ -111,7 +111,7 @@ class Authentication {
   }
 
   //initialize current user
-  Future<void> initializeCurrentUser() async {
+  Future<void> initializeCurrentUser(AuthNotifier authNotifier) async {
     User user = auth.currentUser;
 
     if (user != null) {
