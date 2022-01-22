@@ -29,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
   }
 
   void toast(args) {
-    FlutterToast.showToast(
+    Fluttertoast.showToast(
       msg: msg,
       textColor: Colors.white,
       toastLength: Toast.LENGTH_SHORT,
