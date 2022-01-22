@@ -109,7 +109,7 @@ class Authentication {
   }
 
   //initialize current user
-  Future<void> initializeCurrentUser() {
+  Future<void> initializeCurrentUser() async {
     User user = auth.currentUser;
 
     if (user != null) {
