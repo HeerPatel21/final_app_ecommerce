@@ -223,7 +223,7 @@ class _LoginScreenState extends State<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Not a registered?New User?'
+              'Not a registered?New User?',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
