@@ -37,6 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
       gravity: ToastGravity.BOTTOM,
     );
   }
+
   //creating submit function
   void _submitForm() {
     if (!_formKey.currentState.validate()) {
@@ -44,19 +45,16 @@ class _LoginScreenState extends State<LoginScreen> {
     }
     _formKey.currentState.save();
     AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
-    RegExp regExp = new 
-    RegExp(r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$');
-
+    RegExp regExp = new RegExp(r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$');
 
     if (!regExp.hasMatch(_users.email)) {
-      //toast 
+      //toast
       toast("Enter a Valid Email ID");
-    } else if(_users.password.length < 8) {
+    } else if (_users.password.length < 8) {
       toast("Password must have atleast 8 characters");
-    }
-    else {
+    } else {
       //login function
-      _authentication.login(_users,authNotifier,context);
+      _authentication.login(_users, authNotifier, context);
     }
   }
 
@@ -205,8 +203,7 @@ class _LoginScreenState extends State<LoginScreen> {
           onTap: () {
             //submit function
             _submitForm();
-
-          }
+          },
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
             decoration: BoxDecoration(
