@@ -102,7 +102,7 @@ class Authentication {
 
     //check data uploaded or not
     if (userDataUploadVar != true) {
-      await userRef.doc(currentUser.uid).set(users.toMap()).catchEror((e) => print(e)).then((value) => userDataUploadVar = true);
+      await userRef.doc(currentUser.uid).set(users.toMap()).catchError((e) => print(e)).then((value) => userDataUploadVar = true);
     }
   }
 
