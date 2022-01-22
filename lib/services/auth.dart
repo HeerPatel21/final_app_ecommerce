@@ -5,12 +5,14 @@ import 'auth_notifier.dart';
 import '../models/user.dart';
 import '../screens/admin_home.dart';
 import '../screens/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 class Authentication {
   FirebaseAuth auth = FirebaseAuth.instance;
 
   void toast(args) {
-    FlutterToast.showToast(
+    Fluttertoast.showToast(
       msg: msg,
       textColor: Colors.white,
       toastLength: Toast.LENGTH_SHORT,

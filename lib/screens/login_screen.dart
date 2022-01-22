@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
       msg: msg,
       textColor: Colors.white,
       toastLength: Toast.LENGTH_SHORT,
-      backGroundColor: Colors.grey,
+      backgroundColor: Colors.grey,
       gravity: ToastGravity.BOTTOM,
     );
   }
