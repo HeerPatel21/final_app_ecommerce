@@ -4,7 +4,10 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      child: Container(
+      body: Container(
+        width: MediaQuery.of(context).size.width,
+        height: MediaQuery.of(context).size.height,
+        
         decoration: BoxDecoration(
           gradient: LinearGradient(
             colors: [
