@@ -5,6 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import '../services/auth.dart';
 import '../services/auth_notifier.dart';
 import 'package:provider/provider.dart';
+import 'signup_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -232,14 +233,18 @@ class _LoginScreenState extends State<LoginScreen> {
             SizedBox(
               width: 10,
             ),
-            Text(
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpScreen()));
+              }
+              child: Text(
               'Sign Up Here!',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
-                fontWeight: FontWeight.bold,
-              ), //textStyle
-            ), //text
+                fontWeight: FontWeight.bold), //textStyle
+              ), //text
+            )
           ], //children
         ) //row
       ],
