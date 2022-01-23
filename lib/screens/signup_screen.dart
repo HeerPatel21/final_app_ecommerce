@@ -76,6 +76,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(255, 63, 111, 1),
               ), //textStyle
+              icon: Icon(
+                Icons.account_circle,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ),
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none,
             ), //inputDecoration
           ), //textFormField
         ), //container
