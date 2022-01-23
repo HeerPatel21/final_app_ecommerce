@@ -75,7 +75,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
               return null;
             },
             onSaved: (newValue) {
-              _users.diaplayName = newValue;
+              _users.displayName = newValue;
             },
             keyboardType: TextInputType.name,
             cursorColor: Color.fromRGBO(255, 63, 111, 1),
