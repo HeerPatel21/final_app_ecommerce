@@ -78,31 +78,33 @@ class _LoginScreenState extends State<LoginScreen> {
         ), //BoxDecoration
         child: Form(
           key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Hemaxi',
-                style: TextStyle(
-                  fontSize: 60,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ), //textStyle
-              ), //text
-              Text(
-                'Dress Materials \nAnd Immitations',
-                style: TextStyle(
-                  fontStyle: FontStyle.italic,
-                  fontSize: 27,
-                  color: kPrimaryColor,
-                ), //TextStyle
-              ), //text
-              SizedBox(height: 40),
-              _buildLoginForm(),
-            ],
-          ),
-        ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Hemaxi',
+                  style: TextStyle(
+                    fontSize: 60,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ), //textStyle
+                ), //text
+                Text(
+                  'Dress Materials \nAnd Immitations',
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                    fontSize: 27,
+                    color: kPrimaryColor,
+                  ), //TextStyle
+                ), //text
+                SizedBox(height: 40),
+                _buildLoginForm(),
+              ],
+            ), //column
+          ), //singlechild
+        ), //form
       ), //container
     ); //scaffold
   }
