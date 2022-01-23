@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
+import '../models/user.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
+  Users _users = new Users();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -70,6 +71,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
+            validator: (value) {
+              return null;
+            },
+            onSaved: (newValue) {
+              _users.diaplayName = newValue;
+            },
+            keyboardType: TextInputType.name,
             cursorColor: Color.fromRGBO(255, 63, 111, 1),
             decoration: InputDecoration(
               hintText: 'User Name',
