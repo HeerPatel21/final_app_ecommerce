@@ -70,6 +70,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
+            cursorColor: Color.fromRGBO(255, 63, 111, 1),
             decoration: InputDecoration(
               hintText: 'User Name',
               hintStyle: TextStyle(
