@@ -229,6 +229,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 fontSize: 16,
               ), //textStyle
             ), //text
+            SizedBox(
+              width: 10,
+            ),
             Text(
               'Sign Up Here!',
               style: TextStyle(
