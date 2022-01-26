@@ -291,7 +291,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Not a registered?New User?',
+              'Are You a registered User?',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 16,
@@ -305,7 +305,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpScreen()));
               },
               child: Text(
-                'Sign Up Here!',
+                'Log In Here!',
                 style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold), //textStyle
               ), //text
             )
