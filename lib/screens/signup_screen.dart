@@ -215,7 +215,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
         ), //container
         SizedBox(
-          height:20,,
+          height: 20,
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 40),
