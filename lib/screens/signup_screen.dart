@@ -68,7 +68,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Column(
       children: [
         SizedBox(
-          height: 60,
+          height: 20,
         ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 40),
