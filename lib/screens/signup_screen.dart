@@ -246,7 +246,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     });
                   }),
               enabledBorder: InputBorder.none,
-              hintText: 'Password',
+              hintText: 'Confirm Password',
               hintStyle: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Color.fromRGBO(255, 63, 111, 1),
