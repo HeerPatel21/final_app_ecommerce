@@ -132,6 +132,41 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ), //inputDecoration
           ), //textFormField
         ), //container
+        SizedBox(
+          height: 20,
+        ),
+        //phone Field
+        Container(
+          margin: EdgeInsets.symmetric(horizontal: 40),
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(40),
+          ), //BoxDecoration
+          child: TextFormField(
+            validator: (value) {
+              return null;
+            },
+            onSaved: (newValue) {
+              _users.phone = newValue;
+            },
+            keyboardType: TextInputType.phone,
+            cursorColor: Color.fromRGBO(255, 63, 111, 1),
+            decoration: InputDecoration(
+              hintText: 'Phone Number',
+              hintStyle: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ), //textStyle
+              icon: Icon(
+                Icons.phone,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ),
+              enabledBorder: InputBorder.none,
+              focusedBorder: InputBorder.none,
+            ), //inputDecoration
+          ), //textFormField
+        ), //container
       ],
     );
   }
