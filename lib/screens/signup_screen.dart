@@ -213,7 +213,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
           ),
-          Container(
+        ), //container
+        Container(
           margin: EdgeInsets.symmetric(horizontal: 40),
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
           decoration: BoxDecoration(
@@ -253,7 +254,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
               ),
             ),
           ),
-        ), //container
         ), //container
       ],
     );
