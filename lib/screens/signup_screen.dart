@@ -261,7 +261,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ),
         ), //container
         SizedBox(
-          height: 15,
+          height: 50,
         ),
         //sign up button
         GestureDetector(
@@ -285,7 +285,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ), //container
         ), //GestureDetector
         SizedBox(
-          height: 60,
+          height: 15,
         ),
         //login line
         Row(
