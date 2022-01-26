@@ -285,7 +285,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           ), //container
         ), //GestureDetector
         SizedBox(
-          height: 15,
+          height: 5,
         ),
         //login line
         Row(
