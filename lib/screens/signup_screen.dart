@@ -259,6 +259,27 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ),
         ), //container
+        //sign up button
+        GestureDetector(
+          onTap: () {
+            //submit function
+            //_submitForm();
+          },
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(30),
+            ), //boxDecoration
+            child: Text(
+              "Sign Up",
+              style: TextStyle(
+                fontSize: 20,
+                color: Color.fromRGBO(255, 63, 111, 1),
+              ),
+            ),
+          ), //container
+        ), //GestureDetector
       ],
     );
   }
