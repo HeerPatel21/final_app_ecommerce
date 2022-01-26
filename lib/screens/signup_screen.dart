@@ -309,12 +309,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 'Log In Here!',
                 style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold), //textStyle
               ), //text
-            )
+            ),
+            SizedBox(
+              height: 40,
+            ),
           ], //children
         ), //row
-        SizedBox(
-          height: 20,
-        ),
       ],
     );
   }
