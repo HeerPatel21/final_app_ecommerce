@@ -283,6 +283,34 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ), //container
         ), //GestureDetector
+        SizedBox(
+          height: 60,
+        ),
+        //login line
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Not a registered?New User?',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+              ), //textStyle
+            ), //text
+            SizedBox(
+              width: 10,
+            ),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpScreen()));
+              },
+              child: Text(
+                'Sign Up Here!',
+                style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold), //textStyle
+              ), //text
+            )
+          ], //children
+        ) //row
       ],
     );
   }
