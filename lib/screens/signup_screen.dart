@@ -10,6 +10,8 @@ class SignUpScreen extends StatefulWidget {
 class _SignUpScreenState extends State<SignUpScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   Users _users = new Users();
+
+  bool showPassword = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
