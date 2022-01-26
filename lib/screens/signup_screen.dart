@@ -63,6 +63,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Widget _buildSignUpForm() {
     return Column(
       children: [
+        SizedBox(
+          height: 60,
+        ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 40),
           padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
