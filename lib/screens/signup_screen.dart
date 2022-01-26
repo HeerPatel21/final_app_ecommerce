@@ -259,6 +259,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
           ),
         ), //container
+        SizedBox(
+          height: 50,
+        ),
         //sign up button
         GestureDetector(
           onTap: () {
