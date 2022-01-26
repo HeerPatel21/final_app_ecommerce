@@ -12,6 +12,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   Users _users = new Users();
 
   bool showPassword = true;
+  bool showConfirmPassword = true;
+  final TextEditingController _passwordController = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -225,24 +227,23 @@ class _SignUpScreenState extends State<SignUpScreen> {
             borderRadius: BorderRadius.circular(40),
           ), //BoxDecoration
           child: TextFormField(
-            obscureText: showPassword,
+            obscureText: showConfirmPassword,
             validator: (value) {
               return null;
             },
-            onSaved: (newValue) {
-              _users.password = newValue;
-            },
+            controller: _passwordController,
+            // controller
             cursorColor: Color.fromRGBO(255, 63, 111, 1),
             keyboardType: TextInputType.visiblePassword,
             decoration: InputDecoration(
               suffixIcon: IconButton(
                   icon: Icon(
-                    (showPassword) ? Icons.visibility_off : Icons.visibility,
+                    (showConfirmPassword) ? Icons.visibility_off : Icons.visibility,
                     color: Color.fromRGBO(255, 63, 111, 1),
                   ),
                   onPressed: () {
                     setState(() {
-                      showPassword = !showPassword;
+                      showConfirmPassword = !showConfirmPassword;
                     });
                   }),
               enabledBorder: InputBorder.none,
