@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
 import '../models/user.dart';
+import 'login_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -302,7 +303,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_) => SignUpScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (_) => LoginScreen()));
               },
               child: Text(
                 'Log In Here!',
