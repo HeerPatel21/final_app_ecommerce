@@ -221,7 +221,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ), //container
-        ), //GestureDetector
+        ), //
+        SizedBox(
+          height: 20,
+        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
