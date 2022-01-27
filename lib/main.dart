@@ -6,6 +6,7 @@ import 'utils/color_helper.dart';
 import 'screens/admin_home.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
+import 'services/auth.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
