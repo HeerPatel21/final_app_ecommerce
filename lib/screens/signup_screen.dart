@@ -18,6 +18,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   bool showPassword = true;
   bool showConfirmPassword = true;
+  Authentication _authentication = new Authentication();
 
   final TextEditingController _passwordController = new TextEditingController();
 
