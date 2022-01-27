@@ -41,6 +41,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
     }
   }
 
+  void toast(String msg) {
+    Fluttertoast.showToast(
+      msg: msg,
+      textColor: Colors.white,
+      toastLength: Toast.LENGTH_SHORT,
+      backgroundColor: Colors.grey,
+      gravity: ToastGravity.BOTTOM,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
