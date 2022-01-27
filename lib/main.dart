@@ -49,8 +49,12 @@ class _LandingPageState extends State<LandingPage> {
   @override
   void initState() {
     AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
+    //initialize current
+    _authentication.initializeCurrentUser(authNotifier);
     super.initState();
   }
+
+  Authentication _authentication = new Authentication();
 
   @override
   Widget build(BuildContext context) {

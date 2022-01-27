@@ -31,14 +31,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
     AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
     RegExp regExp = new RegExp(r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$');
 
-    if (!regExp.hasMatch(_users.email)) {
+    if (_users.displayName.length < 4) {
+      toast('Name must have atleast 4 characters');
+    } else if (!regExp.hasMatch(_users.email)) {
       //toast
       toast("Enter a Valid Email ID");
+    } else if (_users.phone.length != 10) {
+      toast('Phone number must be of 10 digits');
+    } else if (int.tryParse(_users.phone) == null) {
+      toast('Contact number must be in numbers');
     } else if (_users.password.length < 8) {
       toast("Password must have atleast 8 characters");
+    } else if (_passwordController.text.toString() != _users.password) {
+      toast("Confirm password does'nt match your password");
     } else {
-      //login function
-      _authentication.login(_users, authNotifier, context);
+      print('Success');
+      _users.role = 'user';
+      //signUp function
+      _authentication.signup(_users, authNotifier, context);
     }
   }
 
@@ -313,7 +323,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
         GestureDetector(
           onTap: () {
             //submit function
-            //_submitForm();
+            _submitForm();
           },
           child: Container(
             padding: EdgeInsets.symmetric(horizontal: 50, vertical: 15),
