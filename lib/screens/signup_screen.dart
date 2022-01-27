@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import '../utils/color_helper.dart';
 import '../models/user.dart';
 import 'login_screen.dart';
+import '../services/auth_notifier.dart';
+import 'package:provider/provider.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -14,7 +17,29 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
   bool showPassword = true;
   bool showConfirmPassword = true;
+
   final TextEditingController _passwordController = new TextEditingController();
+
+  //creating submit function
+  void _submitForm() {
+    if (!_formKey.currentState.validate()) {
+      return;
+    }
+    _formKey.currentState.save();
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
+    RegExp regExp = new RegExp(r'^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$');
+
+    if (!regExp.hasMatch(_users.email)) {
+      //toast
+      toast("Enter a Valid Email ID");
+    } else if (_users.password.length < 8) {
+      toast("Password must have atleast 8 characters");
+    } else {
+      //login function
+      _authentication.login(_users, authNotifier, context);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
