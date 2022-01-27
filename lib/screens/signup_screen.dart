@@ -6,7 +6,6 @@ import '../services/auth_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import '../services/auth.dart';
-import 'signup_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override
@@ -40,6 +39,15 @@ class _SignUpScreenState extends State<SignUpScreen> {
       //login function
       _authentication.login(_users, authNotifier, context);
     }
+  }
+
+  //initState
+  @override
+  void initState() {
+    AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
+    //initialize current user
+    _authentication.initializeCurrentUser(authNotifier);
+    super.initState();
   }
 
   void toast(String msg) {
