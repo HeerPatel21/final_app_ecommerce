@@ -5,6 +5,7 @@ import 'login_screen.dart';
 import '../services/auth_notifier.dart';
 import 'package:provider/provider.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import '../services/auth.dart';
 import 'signup_screen.dart';
 
 class SignUpScreen extends StatefulWidget {
