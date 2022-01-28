@@ -47,6 +47,7 @@ class LandingPage extends StatefulWidget {
 }
 
 class _LandingPageState extends State<LandingPage> {
+  Authentication _authentication = new Authentication();
   @override
   void initState() {
     AuthNotifier authNotifier = Provider.of<AuthNotifier>(context, listen: false);
@@ -54,8 +55,6 @@ class _LandingPageState extends State<LandingPage> {
     _authentication.initializeCurrentUser(authNotifier);
     super.initState();
   }
-
-  Authentication _authentication = new Authentication();
 
   @override
   Widget build(BuildContext context) {
