@@ -7,6 +7,7 @@ import 'screens/admin_home.dart';
 import 'screens/login_screen.dart';
 import 'screens/home_screen.dart';
 import 'services/auth.dart';
+import 'screens/navigation_bar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -105,7 +106,7 @@ class _LandingPageState extends State<LandingPage> {
                     ? print('wait')
                     : (authNotifier.userDetails.role == 'admin')
                         ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => AdminHomeScreen()))
-                        : Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => HomeScreen()));
+                        : Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => NavigationBar()));
           },
           child: Container(
             padding: EdgeInsets.symmetric(

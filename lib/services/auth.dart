@@ -8,6 +8,7 @@ import '../screens/login_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import '../screens/navigation_bar.dart';
 
 class Authentication {
   FirebaseAuth auth = FirebaseAuth.instance;
@@ -49,7 +50,7 @@ class Authentication {
           if (authNotifier.userDetails.role == 'admin') {
             Navigator.push(context, MaterialPageRoute(builder: (_) => AdminHomeScreen()));
           } else {
-            Navigator.push(context, MaterialPageRoute(builder: (_) => AdminHomeScreen()));
+            Navigator.push(context, MaterialPageRoute(builder: (_) => NavigationBar()));
           }
         }
       }
