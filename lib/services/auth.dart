@@ -64,7 +64,7 @@ class Authentication {
     bool userDataUploaded = false;
 
     try {
-      result = await auth.signInWithEmailAndPassword(email: users.email, password: users.password);
+      result = await auth.createUserWithEmailAndPassword(email: users.email, password: users.password);
     } catch (e) {
       toast(e.message.toString());
     }
