@@ -11,16 +11,20 @@ import 'screens/navigation_bar.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: FirebaseOptions(
-      apiKey: "AIzaSyCAV3R0_rKt49pg7F6sTx5LehBqN0ynXHI",
-      authDomain: "appdressmaterial.firebaseapp.com",
-      projectId: "appdressmaterial",
-      storageBucket: "appdressmaterial.appspot.com",
-      messagingSenderId: "726221247194",
-      appId: "1:726221247194:web:309404becdd5afa8d5cbe3",
-    ),
-  );
+  if (kIsWeb) {
+    await Firebase.initializeApp(
+      options: FirebaseOptions(
+        apiKey: "AIzaSyCAV3R0_rKt49pg7F6sTx5LehBqN0ynXHI",
+        authDomain: "appdressmaterial.firebaseapp.com",
+        projectId: "appdressmaterial",
+        storageBucket: "appdressmaterial.appspot.com",
+        messagingSenderId: "726221247194",
+        appId: "1:726221247194:web:309404becdd5afa8d5cbe3",
+      ),
+    );
+  }else {
+    await Firebase.initializeApp(),
+  }
   runApp(
     ChangeNotifierProvider(create: (_) => AuthNotifier(), child: MyApp()),
   );
