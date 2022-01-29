@@ -9,7 +9,7 @@ class _NavigationBarState extends State<NavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(height: 50, color: Colors.blueAccent, items: [
+      bottomNavigationBar: CurvedNavigationBar(backGroundColor: Colors.transparent, height: 50, color: Colors.blueAccent, items: [
         Icon(
           Icons.home,
           size: 26,
