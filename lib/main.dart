@@ -22,8 +22,8 @@ void main() async {
         appId: "1:726221247194:web:309404becdd5afa8d5cbe3",
       ),
     );
-  }else {
-    await Firebase.initializeApp(),
+  } else {
+    await Firebase.initializeApp();
   }
   runApp(
     ChangeNotifierProvider(create: (_) => AuthNotifier(), child: MyApp()),
