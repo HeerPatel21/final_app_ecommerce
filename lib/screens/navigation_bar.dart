@@ -10,14 +10,14 @@ class NavigationBar extends StatefulWidget {
 
 class _NavigationBarState extends State<NavigationBar> {
 
-  final List<Widget>) _children = [
-    // 3 screen widgets
-    HomeScreen(),
-    //cart screen
-    CartScreen(),
-    //account screen
-    AccountScreen(),
-  ];
+final List<Widget>) _children = [
+  // 3 screen widgets
+  HomeScreen(),
+  //cart screen
+  CartScreen(),
+  //account screen
+  AccountScreen(),
+];
 
   @override
   Widget build(BuildContext context) {
