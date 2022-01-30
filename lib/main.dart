@@ -111,7 +111,12 @@ class _LandingPageState extends State<LandingPage> {
                     ? print('wait')
                     : (authNotifier.userDetails.role == 'admin')
                         ? Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => AdminHomeScreen()))
-                        : Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => NavigationBar()));
+                        : Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => NavigationBar(
+                                      selectedIndex: 0,
+                                    )));
           },
           child: Container(
             padding: EdgeInsets.symmetric(

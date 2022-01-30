@@ -50,7 +50,12 @@ class Authentication {
           if (authNotifier.userDetails.role == 'admin') {
             Navigator.push(context, MaterialPageRoute(builder: (_) => AdminHomeScreen()));
           } else {
-            Navigator.push(context, MaterialPageRoute(builder: (_) => NavigationBar()));
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (_) => NavigationBar(
+                          selectedIndex: 0,
+                        )));
           }
         }
       }
