@@ -8,7 +8,10 @@ class HomeScreen extends StatelessWidget {
         body: Column(
       children: [
         //header section
-        HeaderSection(),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: HeaderSection(),
+        ),
       ],
     ));
   }

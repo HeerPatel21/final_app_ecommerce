@@ -10,7 +10,7 @@ class HeaderSection extends StatelessWidget {
     return Row(
       children: [
         // search text field
-        CustomSearchTextField(),
+        Expanded(child: CustomSearchTextField()),
         //notification icon
       ],
     );

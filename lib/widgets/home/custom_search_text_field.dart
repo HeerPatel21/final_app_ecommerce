@@ -6,6 +6,7 @@ class CustomSearchTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 70,
       decoration: BoxDecoration(
         color: Color(0xFFe5989b).withOpacity(0.33),
         borderRadius: BorderRadius.circular(15),
