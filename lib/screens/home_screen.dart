@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../widgets/home/header_section.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -7,6 +8,7 @@ class HomeScreen extends StatelessWidget {
         body: Column(
       children: [
         //header section
+        HeaderSection(),
       ],
     ));
   }
