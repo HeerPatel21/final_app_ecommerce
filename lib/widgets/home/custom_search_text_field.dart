@@ -8,7 +8,7 @@ class CustomSearchTextField extends StatelessWidget {
     return Container(
       height: 70,
       decoration: BoxDecoration(
-        color: Colors.blueAccent.withOpacity(0.33),
+        color: Colors.purple.withOpacity(0.33),
         borderRadius: BorderRadius.circular(15),
       ),
     );
