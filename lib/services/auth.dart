@@ -5,8 +5,6 @@ import 'auth_notifier.dart';
 import '../models/user.dart';
 import '../screens/admin_home.dart';
 import '../screens/login_screen.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../screens/navigation_bar.dart';
 
