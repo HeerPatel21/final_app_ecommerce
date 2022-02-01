@@ -18,15 +18,11 @@ class HeaderSection extends StatelessWidget {
         )),
         //notification icon
         Container(
-          // decoration: BoxDecoration(
-          //   borderRadius: BorderRadius.circular(50),
-          //   border: Border.all(color: Colors.blue, width: 3),
-          // ),
           child: IconButton(
               icon: Icon(
                 Icons.notifications_none_outlined,
                 size: 30,
-                color: Colors.blue,
+                color: Colors.purple,
               ),
               onPressed: () {}),
         ),
