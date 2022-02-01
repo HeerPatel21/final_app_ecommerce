@@ -26,7 +26,7 @@ class HeaderSection extends StatelessWidget {
               icon: Icon(
                 Icons.notifications_none_outlined,
                 size: 33,
-                color: Color(0xFF800f2f),
+                color: Colors.blue,
               ),
               onPressed: () {}),
         ),
