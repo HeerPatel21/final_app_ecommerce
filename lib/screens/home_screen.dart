@@ -11,7 +11,11 @@ class HomeScreen extends StatelessWidget {
         //header section
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: HeaderSection(),
+          child: HeaderSection(
+            onSearchSubmit: (value) {
+              //will update later
+            },
+          ),
         ),
       ],
     ));
