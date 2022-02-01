@@ -23,6 +23,8 @@ class HeaderSection extends StatelessWidget {
             border: Border.all(color: Colors.blue, width: 3),
           ),
           child: IconButton(
+            mainAxisAlignment: MainAxisAlignment.center;
+            crossAxisAlignment: CrossAxisAlignment.center;
               icon: Icon(
                 Icons.notifications_none_outlined,
                 size: 33,
