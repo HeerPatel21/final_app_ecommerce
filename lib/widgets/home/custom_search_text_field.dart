@@ -10,7 +10,7 @@ class CustomSearchTextField extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.purple.withOpacity(0.33),
         borderRadius: BorderRadius.circular(15),
-      ), //BoxDecoration
+      ),
       child: TextField(
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
