@@ -4,5 +4,5 @@ enum ProductType {
   Diptex_Materials,
   Work_Materials,
   Bandhini_Materials,
-  All_Others,
+  Others,
 }
