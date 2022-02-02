@@ -23,7 +23,14 @@ class ProductTypeBox extends StatelessWidget {
           ),
           child: Column(
             children: [
-              Expanded(child: Padding(padding: const EdgeInsets.all(6.0), child: AspectRatio(aspectRatio: 1, child: new Image.asset('assets/icons/', width: 50, height: 50))))
+              Expanded(
+                  child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: AspectRatio(
+                          aspectRatio: 1,
+                          child: new Image.asset(
+                            icon,
+                          ))))
             ],
           ),
         ));
