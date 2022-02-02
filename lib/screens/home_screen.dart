@@ -60,10 +60,14 @@ class HomeScreen extends StatelessWidget {
         SizedBox(
           height: 120,
           child: ListView(
+            physics: BouncingScrollPhysics(),
+            scrollDirection: Axis.horizontal,
             children: [
               ...List.generate(
                 productCategories.length,
-                (index) => ProductTypeBox(),
+                (index) => ProductTypeBox(
+                  icon: productCategories[index][ICON_KEY],
+                ),
               ),
             ],
           ),
