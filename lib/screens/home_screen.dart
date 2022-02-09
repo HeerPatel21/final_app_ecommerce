@@ -57,6 +57,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
         //categories section
+        SizedBox(height: 15),
         SizedBox(
           height: 120,
           child: ListView(
@@ -66,6 +67,7 @@ class HomeScreen extends StatelessWidget {
               ...List.generate(
                 productCategories.length,
                 (index) => ProductTypeBox(
+                  title: productCategories[index][TITLE_KEY],
                   icon: productCategories[index][ICON_KEY],
                 ),
               ),

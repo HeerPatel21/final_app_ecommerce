@@ -3,9 +3,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../utils/color_helper.dart';
 
 class ProductTypeBox extends StatelessWidget {
-  const ProductTypeBox({Key key, @required this.icon}) : super(key: key);
+  const ProductTypeBox({Key key, @required this.icon, @required this.title}) : super(key: key);
 
   final String icon;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return AspectRatio(
@@ -32,7 +33,17 @@ class ProductTypeBox extends StatelessWidget {
                           child: SvgPicture.asset(
                             icon,
                             color: kPrimaryColor,
-                          ))))
+                          )))),
+              Text(
+                title,
+                style: TextStyle(
+                  color: kPrimaryColor,
+                  fontSize: 8,
+                  fontWeight: FontWeight.w900,
+                ),
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ],
           ),
         ));
