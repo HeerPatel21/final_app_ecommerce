@@ -111,7 +111,7 @@ class Authentication {
   }
 
   //to get user details
-  Future<void> getUserDetails(AuthNotifier authNotifier) {
+  Future<void> getUserDetails(AuthNotifier authNotifier) async {
     FirebaseFirestore.instance.collection('users').doc(authNotifier.user.uid).get().catchError((e) => print(e)).then((value) => (value != null) ? authNotifier.setUserDetails(Users.fromMap(value.data())) : print(value));
   }
 

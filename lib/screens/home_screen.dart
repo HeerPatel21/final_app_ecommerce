@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../widgets/home/header_section.dart';
 import '../models/products.dart';
 import '../widgets/categories/product_type_box.dart';
+import 'category_products_screen.dart';
 
 const String ICON_KEY = 'icon';
 const String TITLE_KEY = 'title';
@@ -10,7 +11,7 @@ const String PRODUCT_TYPE_KEY = 'product_type';
 class HomeScreen extends StatelessWidget {
   final productCategories = <Map>[
     <String, dynamic>{
-      ICON_KEY: 'assets/icons/mayur_creation.svg',
+      ICON_KEY: 'assets/icons/electronics.svg',
       TITLE_KEY: 'Mayur',
       PRODUCT_TYPE_KEY: ProductType.Mayur_Materials,
     },
@@ -67,6 +68,9 @@ class HomeScreen extends StatelessWidget {
               ...List.generate(
                 productCategories.length,
                 (index) => ProductTypeBox(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => CategoryProductScreen()));
+                  },
                   title: productCategories[index][TITLE_KEY],
                   icon: productCategories[index][ICON_KEY],
                 ),
