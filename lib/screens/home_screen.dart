@@ -10,7 +10,7 @@ const String PRODUCT_TYPE_KEY = 'product_type';
 class HomeScreen extends StatelessWidget {
   final productCategories = <Map>[
     <String, dynamic>{
-      ICON_KEY: 'assets/icons/Electronics.svg',
+      ICON_KEY: 'assets/icons/mayur_creation.svg',
       TITLE_KEY: 'Mayur',
       PRODUCT_TYPE_KEY: ProductType.Mayur_Materials,
     },
