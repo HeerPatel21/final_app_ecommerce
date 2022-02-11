@@ -14,6 +14,7 @@ class _CategoryProductState extends State<CategoryProduct> {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Column(children: [
         //header section
+        SizedBox(height: 40),
         Row(children: [
           IconButton(
             icon: Icon(
