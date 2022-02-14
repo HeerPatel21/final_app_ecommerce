@@ -16,7 +16,7 @@ class _CategoryProductState extends State<CategoryProduct> {
         //header section
         SizedBox(height: 40),
         Row(children: [
-          IconButton(
+          IconButton(            
             icon: Icon(
               Icons.west_outlined,
               color: Color(0xFF800f2f),
@@ -24,9 +24,10 @@ class _CategoryProductState extends State<CategoryProduct> {
             onPressed: () {
               Navigator.pop(context);
             },
+          Expanded(child:CustomSearchTextField(onSubmitted: (value) {})),
           ),
-        ])
-      ]),
+        ],)
+      ],),
     );
   }
 }
